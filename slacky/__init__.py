@@ -5,3 +5,6 @@
 __author__ = """Viktor Kostan"""
 __email__ = 'viktor.kostan@gmail.com'
 __version__ = '0.1.0'
+
+from .sender import SlackMessageSender
+from .message import SlackMessage
