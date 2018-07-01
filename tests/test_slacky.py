@@ -25,4 +25,4 @@ def test_content(response):
     # assert 'GitHub' in BeautifulSoup(response.content).title.string
 
     sm = SlackMessage('aaa')
-    sm.send_ephemeral('#general', 'mhunka',settings.SLACK_APP_ACCESS_TOKEN)
+    sm.send('#general', settings.SLACK_APP_ACCESS_TOKEN)
