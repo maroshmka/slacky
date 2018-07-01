@@ -6,7 +6,7 @@
 import pytest
 
 
-from slacky import SlackMessage
+from slacky import SlackMessage, settings
 
 
 @pytest.fixture
@@ -25,4 +25,4 @@ def test_content(response):
     # assert 'GitHub' in BeautifulSoup(response.content).title.string
 
     sm = SlackMessage('aaa')
-    sm.send('#general')
+    sm.send_ephemeral('#general', 'mhunka',settings.SLACK_APP_ACCESS_TOKEN)
