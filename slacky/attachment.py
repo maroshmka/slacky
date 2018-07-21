@@ -63,7 +63,7 @@ class SlackAttachment(SlackObject):
             'title': self.get_title(),
             'title_link': self.get_title_link(),
             'text': self.get_text(),
-            'fields': [f.as_dict() for f in self.fields],
+            'fields': self.get_fields(),
             'image_url': self.get_image_url(),
             'thumb_url': self.get_thumb_url(),
             'footer': self.get_footer(),
